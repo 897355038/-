@@ -60,7 +60,7 @@ exports.updatetCateById=(req,res)=>{
         db.query(sqlStr,[articInfo,articInfo.Id],(err,data)=>{
             if(err) return res.cc(err)
             if(data.affectedRows!==1) return res.cc('更新文章分类失败')
-            res.cc('更新文章分类成功')
+            res.cc('更新文章分类成功',0)
         })
 
 
